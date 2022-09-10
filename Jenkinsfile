@@ -11,7 +11,7 @@ node {
         /* synonymous to
          * docker build on the command line */
 
-        app = docker.build "Firt-Node_Project"
+        app = docker.build "first-node-image"
     }
 
     stage('Test image') {
