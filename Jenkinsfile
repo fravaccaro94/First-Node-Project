@@ -11,7 +11,7 @@ node {
         /* synonymous to
          * docker build on the command line */
 
-        app = docker.build("fravaccaro94/First-Node-Project")
+        app = docker.build("First-Node-Project")
     }
 
     stage('Test image') {
@@ -24,9 +24,9 @@ node {
 
     stage('Push image') {
         /* push image built on docker hub. */
-    /*    docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
+        docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
-     */   }
+       }
     
 }
